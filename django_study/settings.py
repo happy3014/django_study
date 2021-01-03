@@ -25,7 +25,7 @@ SECRET_KEY = '$i)+xpf(5h91l14_w*^=bh$%eo!fsvrwl6ij=k+3#iww%hd5w4'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*',]
 
 
 # Application definition
@@ -75,8 +75,12 @@ WSGI_APPLICATION = 'django_study.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'django_study_db',
+        'HOST': '10.0.1.10',
+        'PORT': 3306,
+        'USER': 'django_studier',
+        'PASSWORD': 'GuYHidsTBwUEuLJV',
     }
 }
 
